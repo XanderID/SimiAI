@@ -3,7 +3,7 @@ SimiAI by MulqiGaming64 is a PocketMine-MP Plugin To Allow Players To Talk With 
 
 # Language
 
-List of languages ​​that can be used by SimiAI
+List of languages â€‹â€‹that can be used by SimiAI
 ISO 3166-1| Country
 --- | ---
 `ar` | Arab
@@ -60,7 +60,8 @@ timeout: 500
 
 ## 📸 Screenshot
 
-<img src="https://github.com/MulqiGaming64/SimiAI/blob/main/images/image.png">
+<img src="https://github.com/MulqiGaming64/SimiAI/blob/main/images/screenshot.png">
+<img src="https://github.com/MulqiGaming64/SimiAI/blob/main/images/screenshot2.png">
 
 # Additional Notes
 
