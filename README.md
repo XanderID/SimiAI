@@ -95,10 +95,9 @@ class XYZPlugin extends PluginBase implements Listener {
     * @return bool  
     */
    public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
-     if($command->getName() !== "xyz") {
-       return false;
+     if($command->getName() == "xyz") {
+       $sender->sendMessage(SimiAI::getInstance()->simiChat($args[0], "en", 500));
      }
-     $sender->sendMessage(SimiAI::getInstance()->simiChat($args[0], "en", 500));
      return true;
    }  
 }  
