@@ -1,0 +1,25 @@
+# Prefix Settings
+
+prefix: "[§aSimiAI§r]"
+
+# Tag
+
+# {MSG} Message SimiAI
+
+# {PREFIX} Prefix
+
+# {NAME}
+
+# SimiAI Chat Settings
+
+simi-chat: "{PREFIX} §a{MSG}"
+
+# Player Chat Settings
+
+# If you not using PureChat
+
+player-chat: "{NAME} > {MSG}"
+
+# SimiAI Timeout Request
+
+timeout: 500
