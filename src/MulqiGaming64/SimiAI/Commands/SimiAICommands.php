@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace MulqiGaming64\SimiAI\Commands;
 
@@ -51,7 +52,6 @@ class SimiAICommands extends PluginCommand {
 						$player->sendMessage(TextFormat::GREEN . "Success Change To SimiAI Private Chat");
 						$this->plugin->type[strtolower($player->getName())] = "private";
 					}
-					return true;
 				break;
 				case "lang":
 					if(!$player->hasPermission("simiai.cmd.lang") and !$player->hasPermission("simiai.cmd")) {
@@ -59,7 +59,6 @@ class SimiAICommands extends PluginCommand {
 						return false;
 					}
 					$this->plugin->sendLangAI($player);
-					return true;
 				break;
 				case "help":
 					if(!$player->hasPermission("simiai.cmd.help") and !$player->hasPermission("simiai.cmd")) {
@@ -67,7 +66,6 @@ class SimiAICommands extends PluginCommand {
 						return false;
 					}
 					$player->sendMessage(TextFormat::GREEN . "SimiAI Commands:" . TextFormat::EOL . TextFormat::GREEN . "/sai switch" . TextFormat::WHITE . " Change Channel" . TextFormat::EOL . TextFormat::GREEN . "/sai lang" . TextFormat::WHITE . " Change Language AI");
-					return true;
 				break;
 				default:
 					if(!$player->hasPermission("simiai.cmd.help") and !$player->hasPermission("simiai.cmd")) {
@@ -75,7 +73,6 @@ class SimiAICommands extends PluginCommand {
 						return false;
 					}
 					$player->sendMessage(TextFormat::GREEN . "SimiAI Commands:" . TextFormat::EOL . TextFormat::GREEN . "/sai switch" . TextFormat::WHITE . " Change Channel" . TextFormat::EOL . TextFormat::GREEN . "/sai lang" . TextFormat::WHITE . " Change Language AI");
-					return true;
 				break;
 			}
 		} else {
