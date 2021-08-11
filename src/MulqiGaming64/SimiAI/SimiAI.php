@@ -185,11 +185,8 @@ class SimiAI extends PluginBase implements Listener{
     
 
 	/**
-
      * @param PlayerChatEvent $event
-
      * @priority HIGHEST
-
      */
 
 	public function onChat(PlayerChatEvent $event){
@@ -246,7 +243,7 @@ class SimiAI extends PluginBase implements Listener{
 
 	
 
-	public function simiChat(string $text, string $lang, int $timeout){
+	public function simiChat(string $text, string $lang, int $timeout): void{
 
         $ctx = $this->initializeAI($text, $lang, $timeout);
 
@@ -282,7 +279,7 @@ class SimiAI extends PluginBase implements Listener{
 
     
 
-    private function initializeAI($text, $lang, $timeout){
+    private function initializeAI($text, $lang, $timeout): void{
 
         $ctx = curl_init(self::SIMI_API_URL . "?apikey=poggitsimi&text=" . urlencode($text) . "&lang=" . $lang);
 
@@ -293,35 +290,20 @@ class SimiAI extends PluginBase implements Listener{
         curl_setopt($ctx, CURLOPT_SSL_VERIFYPEER, false);
 
         curl_setopt($ctx, CURLOPT_TIMEOUT, $timeout);
-
         curl_setopt($ctx, CURLOPT_FOLLOWLOCATION, false);
-
         return $ctx;
-
     }
 
-    
-
-    public function getLangAI($player){
-
+    public function getLangAI($player): void{
     	if($player instanceof Player){
-
 			$player = $player->getName();
-
 		}
-
 		$player = strtolower($player);
-
 		return $this->lang["lang"][$player];
 
 	}
-
 	
-
-	public function sendLangAI(Player $player){
-
+	public function sendLangAI(Player $player): void{
 		$player->sendForm(new LangAI($this));
-
 	}
-
 }
