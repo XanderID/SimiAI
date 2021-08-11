@@ -1,5 +1,4 @@
-# SimiAI
-<img src="icon.png">
+<h1>SimiAI<img src="https://github.com/MulqiGaming64/SimiAI/blob/master/images/image.png" height="64" width="64" align="left"></h1><br>
 SimiAI by MulqiGaming64 is a PocketMine-MP Plugin To Allow Players To Talk With AI (Simi)
 
 # Language
