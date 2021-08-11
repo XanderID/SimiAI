@@ -3,7 +3,7 @@ SimiAI by MulqiGaming64 is a PocketMine-MP Plugin To Allow Players To Talk With 
 
 # Language
 
-List of languages â€‹â€‹that can be used by SimiAI
+List of languages that can be used by SimiAI 
 ISO 3166-1| Country
 --- | ---
 `ar` | Arab
@@ -58,10 +58,59 @@ player-chat: "{NAME} > {MSG}"
 timeout: 500
 ```
 
+## SimiAI Api
+- You Can add SimiAI Chat to your plugins
+**Examples:**
+
+```php
+<?php  
+  
+declare(strict_types=1);  
+  
+namespace xyz;  
+  
+use MulqiGaming64\SimiAI\SimiAI;  
+use pocketmine\command\Command;  
+use pocketmine\command\CommandSender;  
+use pocketmine\event\Listener;  
+use pocketmine\plugin\PluginBase;  
+  
+/**  
+ * Class XYZPlugin
+ * @package xyz  
+ */
+class XYZPlugin extends PluginBase implements Listener {
+ 
+  
+  public function onEnable() {  
+    $this->getServer()->getPluginManager()->registerEvents($this, $this);  
+  }
+    
+  /**  
+    * @param CommandSender $sender  
+    * @param Command $command  
+    * @param string $label  
+    * @param array $args
+    *   
+    * @return bool  
+    */
+   public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
+     if($command->getName() !== "xyz") {
+       return false;
+     }
+     $sender->sendMessage(SimiAI::getInstance()->simiChat($args[0], "en", 500));
+     return true;
+   }  
+}  
+```
+
 ## 📸 Screenshot
 
 <img src="https://github.com/MulqiGaming64/SimiAI/blob/main/images/screenshot.png">
 <img src="https://github.com/MulqiGaming64/SimiAI/blob/main/images/screenshot2.png">
+
+## Todo List
+- Add SimiAI Chat Event
 
 # Additional Notes
 
