@@ -58,7 +58,11 @@ player-chat: "{NAME} > {MSG}"
 timeout: 500
 ```
 
+## 📸 Screenshot
+
+<img src="https://github.com/MulqiGaming64/SimiAI/blob/main/images/image.png">
+
 # Additional Notes
 
 - If you find bugs or want to give suggestions, please visit [here](https://github.com/MulqiGaming64/SimiAI/issues)
-- Icons made by <p>Wikimedia</a> from <a href="https://commons.m.wikimedia.org/">commons.m.wikimedia.org</a></p>
+- Icons made by <a href="https://commons.m.wikimedia.org/">commons.m.wikimedia.org</a>
