@@ -37,11 +37,16 @@ class SimiAI extends PluginBase implements Listener{
     private static $instance;
 
     
-
+    /**
+    * @var array
+    */
     public $type = [];
 
     private $purechat;
 
+    /**
+    * @var array
+    */
     public $lang = [];
 
     
