@@ -1,0 +1,22 @@
+---
+name: SimiAI
+main: MulqiGaming64\SimiAI\SimiAI
+description: Allow Player To Chat With AI
+api: 3.0.0
+version: 1.0.0
+author: MulqiGaming64
+permissions:
+  simiai.cmd:
+    default: op
+    description: Permission for all AI commands
+    children:
+      simiai.cmd.help:
+        description: Permission for /simiai help
+        default: op
+      simiai.cmd.switch:
+        description: Permission for Chat With AI
+        default: op
+      simiai.cmd.lang:
+        description: Permission for Change AI Language
+        default: op
+...
