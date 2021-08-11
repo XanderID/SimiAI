@@ -31,7 +31,7 @@ class SimiAICommands extends PluginCommand {
      * @param CommandSender $player
      * @param string $commandLabel
      * @param array $args
-     * @return bool|mixed|void
+     * @return bool
      */
     public function execute(CommandSender $player, string $commandLabel, array $args): bool {
 		if (!$player instanceof Player) {
