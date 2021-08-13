@@ -6,7 +6,8 @@ use MulqiGaming64\SimiAI\SimiAI;
 use pocketmine\scheduler\Task;
 
 class SaveLangTask extends Task {
-	
+
+    /** @var SimiAI $plugin */
     private $plugin;
     
 	public function __construct(SimiAI $plugin){
