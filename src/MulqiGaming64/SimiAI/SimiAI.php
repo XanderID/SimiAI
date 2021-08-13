@@ -15,6 +15,7 @@ use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat;
 use EasyUI\EasyUI;
 use MulqiGaming64\SimiAI\Form\LangAI;
+use MulqiGaming64\SimiAI\Task\SaveLangTask;
 
 class SimiAI extends PluginBase implements Listener{
 
@@ -46,15 +47,16 @@ class SimiAI extends PluginBase implements Listener{
 		$this->checkDepends();
 		$this->config = (new Config($this->getDataFolder() . "config.yml", Config::YAML))->getAll();
 		$this->lang = yaml_parse(file_get_contents($this->getDataFolder() . "lang.yml"));
+		if($this->config["auto-save"] >= 1){
+			$this->getScheduler()->scheduleDelayedRepeatingTask(new SaveLangTask($this), $this->config["auto-save"] * 1200, $this->config["auto-save"] * 1200);
+		}
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getServer()->getCommandMap()->register("SimiAI", new SimiAICommands($this));
 		self::$instance = $this;
     }
     
-    public function onDisable(){
-        file_put_contents($this->getDataFolder() . "lang.yml", yaml_emit($this->lang));
-        $this->getLogger()->warning("Saving Language Settings For Player, Please Wait...");
-        sleep(3);
+    public function saveLangPlayer(){
+    	file_put_contents($this->getDataFolder() . "lang.yml", yaml_emit($this->lang));
     }
     
     private function checkExtensions(){
