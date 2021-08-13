@@ -6,6 +6,6 @@ projects:
   SimiAI:
     path: ""
     libs:
-      - src: andresbytes/EasyUI/libEasyUI
+      - src: GiantQuartz/EasyUI/libEasyUI
         version: 1.0.0
 ...
