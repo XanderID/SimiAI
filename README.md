@@ -56,6 +56,9 @@ player-chat: "{NAME} > {MSG}"
 
 # SimiAI Timeout Request
 timeout: 500
+
+# SimiAI Save Lang Interval
+auto-save: 10
 ```
 
 ## SimiAI Api
